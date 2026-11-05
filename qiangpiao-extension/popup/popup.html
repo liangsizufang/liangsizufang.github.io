@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>qiangpiao</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1>qiangpiao</h1>
+        <p class="tagline">Ticketmaster US assist — you click pay</p>
+      </div>
+      <span class="badge" id="versionBadge">v0.1</span>
+    </header>
+
+    <section class="panel" aria-labelledby="addHeading">
+      <h2 id="addHeading">Watch an event</h2>
+      <form id="addForm" class="stack">
+        <label>
+          Event URL
+          <input
+            id="urlInput"
+            type="url"
+            required
+            placeholder="https://www.ticketmaster.com/..."
+            autocomplete="off"
+          />
+        </label>
+        <label>
+          Label
+          <input id="labelInput" type="text" placeholder="Optional name" autocomplete="off" />
+        </label>
+        <div class="row">
+          <label class="grow">
+            Qty
+            <input id="qtyInput" type="number" min="1" max="20" value="2" />
+          </label>
+          <label class="grow">
+            Onsale (local)
+            <input id="onsaleInput" type="datetime-local" />
+          </label>
+        </div>
+        <label>
+          Preferred sections
+          <input
+            id="sectionInput"
+            type="text"
+            placeholder="e.g. Floor, 101-105, Lower Bowl"
+            autocomplete="off"
+          />
+        </label>
+        <label>
+          Price notes
+          <input
+            id="priceInput"
+            type="text"
+            placeholder="e.g. under $150, avoid Platinum"
+            autocomplete="off"
+          />
+        </label>
+        <button type="submit" class="btn primary">Add to watch list</button>
+      </form>
+      <button type="button" class="btn ghost" id="addCurrentBtn">
+        Add current tab
+      </button>
+    </section>
+
+    <section class="panel" aria-labelledby="listHeading">
+      <div class="panel-head">
+        <h2 id="listHeading">Watch list</h2>
+        <span class="muted" id="listCount">0</span>
+      </div>
+      <div id="watchList" class="list" role="list"></div>
+      <p class="empty" id="emptyState">No events yet. Paste a Ticketmaster US URL above.</p>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Compliant assist only. No queue jump, CAPTCHA solve, or payment submit.
+      </p>
+    </footer>
+
+    <script src="../shared/storage.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

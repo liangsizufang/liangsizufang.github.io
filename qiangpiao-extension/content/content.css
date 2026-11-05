@@ -1,0 +1,171 @@
+#qiangpiao-root {
+  all: initial;
+  position: fixed;
+  z-index: 2147483646;
+  right: 16px;
+  bottom: 16px;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #142126;
+}
+
+#qiangpiao-root * {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+#qiangpiao-root .qp-panel {
+  width: 300px;
+  background: #ffffff;
+  border: 1px solid #c9d6db;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(20, 33, 38, 0.18);
+  overflow: hidden;
+}
+
+#qiangpiao-root .qp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #0e7490;
+  color: #fff;
+}
+
+#qiangpiao-root .qp-header strong {
+  font-size: 13px;
+  letter-spacing: -0.01em;
+}
+
+#qiangpiao-root .qp-toggle {
+  border: 0;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+#qiangpiao-root .qp-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#qiangpiao-root.qp-collapsed .qp-body {
+  display: none;
+}
+
+#qiangpiao-root .qp-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5b6b72;
+}
+
+#qiangpiao-root input,
+#qiangpiao-root select,
+#qiangpiao-root textarea {
+  width: 100%;
+  border: 1px solid #d7e0e4;
+  border-radius: 6px;
+  padding: 7px 8px;
+  font: inherit;
+  color: #142126;
+  background: #fff;
+}
+
+#qiangpiao-root textarea {
+  min-height: 52px;
+  resize: vertical;
+}
+
+#qiangpiao-root .qp-row {
+  display: flex;
+  gap: 8px;
+}
+
+#qiangpiao-root .qp-row > * {
+  flex: 1;
+  min-width: 0;
+}
+
+#qiangpiao-root .qp-btn {
+  border: 1px solid #d7e0e4;
+  background: #fff;
+  color: #142126;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+#qiangpiao-root .qp-btn:hover {
+  background: #f0f5f7;
+}
+
+#qiangpiao-root .qp-btn.primary {
+  background: #0e7490;
+  border-color: #0b5f75;
+  color: #fff;
+}
+
+#qiangpiao-root .qp-btn.primary:hover {
+  background: #0b5f75;
+}
+
+#qiangpiao-root .qp-btn.block {
+  width: 100%;
+}
+
+#qiangpiao-root .qp-hint {
+  margin: 0;
+  font-size: 11px;
+  color: #5b6b72;
+}
+
+#qiangpiao-root .qp-status {
+  font-size: 11px;
+  font-weight: 650;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: #eef5f7;
+  color: #0e7490;
+}
+
+#qiangpiao-root .qp-status.err {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+#qiangpiao-root .qp-status.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+#qiangpiao-root .qp-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#qiangpiao-root .qp-outcome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.qiangpiao-highlight {
+  outline: 3px solid #0e7490 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(14, 116, 144, 0.25) !important;
+  scroll-margin-top: 96px;
+}
