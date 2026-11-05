@@ -1,0 +1,292 @@
+:root {
+  --bg: #f4f7f8;
+  --panel: #ffffff;
+  --ink: #142126;
+  --muted: #5b6b72;
+  --line: #d7e0e4;
+  --teal: #0e7490;
+  --teal-ink: #ffffff;
+  --warn: #9a3412;
+  --ok: #166534;
+  --radius: 8px;
+  --font: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 360px;
+  max-height: 580px;
+  overflow: auto;
+  font: 13px/1.4 var(--font);
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 14px 10px;
+  background: linear-gradient(180deg, #e8f4f7 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.badge {
+  flex: none;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--teal);
+  background: #dff3f8;
+  border: 1px solid #b6e0ea;
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.panel {
+  margin: 10px 12px;
+  padding: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.panel-head h2 {
+  margin: 0;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px 8px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #9ad4e2;
+  outline-offset: 1px;
+  border-color: var(--teal);
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f0f5f7;
+}
+
+.btn.primary {
+  background: var(--teal);
+  border-color: #0b5f75;
+  color: var(--teal-ink);
+}
+
+.btn.primary:hover {
+  background: #0b5f75;
+}
+
+.btn.ghost {
+  width: 100%;
+  margin-top: 8px;
+  background: transparent;
+}
+
+.btn.small {
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+.btn.danger {
+  color: var(--warn);
+  border-color: #f0c7b4;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px;
+  background: #fbfcfd;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.card-title a {
+  color: var(--ink);
+  font-weight: 650;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.card-title a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+.status {
+  flex: none;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #e8eef1;
+  color: var(--muted);
+}
+
+.status.onsale,
+.status.got {
+  background: #dcfce7;
+  color: var(--ok);
+}
+
+.status.soldout,
+.status.failed {
+  background: #ffedd5;
+  color: var(--warn);
+}
+
+.status.limited {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.meta {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.prefs {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--ink);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.empty.hidden,
+.list:empty + .empty {
+  display: block;
+}
+
+.list:not(:empty) + .empty {
+  display: none;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.footer {
+  padding: 4px 14px 12px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.edit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.edit-grid label.full {
+  grid-column: 1 / -1;
+}
